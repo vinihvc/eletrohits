@@ -27,10 +27,12 @@ export const useBreakpoints = () => {
   }, [])
 
   const isGreaterThan = (breakpoint: Breakpoint) =>
-    windowWidth > breakpoints[breakpoint]
+    // biome-ignore lint/style/noNonNullAssertion: <explanation>
+    windowWidth > breakpoints[breakpoint!]!
 
   const isLessThan = (breakpoint: Breakpoint) =>
-    windowWidth < breakpoints[breakpoint]
+    // biome-ignore lint/style/noNonNullAssertion: <explanation>
+    windowWidth < breakpoints[breakpoint!]!
 
   return {
     windowWidth,

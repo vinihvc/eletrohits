@@ -28,7 +28,8 @@ export const SongsItem = (props: SongsItemProps) => {
   const { togglePlay, play } = usePlayerActions()
   const { isMaxSm } = useBreakpoints()
 
-  const song = songs[index]
+  // biome-ignore lint/style/noNonNullAssertion: <explanation>
+  const song = songs[index]!
 
   const currentSong = playlist?.[currentIndex]
 

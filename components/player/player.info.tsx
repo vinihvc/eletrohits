@@ -16,18 +16,18 @@ export const PlayerSongInfo = () => {
         <BlurImage
           width={40}
           height={40}
-          className="size-10 aspect-square scale-125 object-cover select-none"
+          className="aspect-square size-10 scale-125 select-none object-cover"
           src={`https://img.youtube.com/vi/${currentSong?.youtubeId}/0.jpg`}
           alt={`${currentSong?.name} album cover`}
         />
       </div>
 
       <div>
-        <div className="line-clamp-1 text-sm font-medium">
+        <div className="line-clamp-1 font-medium text-sm">
           {currentSong?.name}
         </div>
 
-        <div className="line-clamp-1 text-xs text-muted-foreground">
+        <div className="line-clamp-1 text-muted-foreground text-xs">
           {currentSong?.singer}
         </div>
       </div>

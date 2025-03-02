@@ -1,12 +1,15 @@
 import { LikeButton } from '@/components/player/actions/like'
 import { PlayButton } from '@/components/player/actions/play'
-import { useLongPress } from '@/hooks/use-long-press'
+import { useBreakpoints } from '@/hooks/use-breakpoints'
 import { cn } from '@/lib/utils'
-import { useMusicState } from '@/store/app.store'
+import {
+  useMusicState,
+  usePlayerActions,
+  usePlayerState,
+} from '@/store/app.store'
 import type { SongType } from '@/types/song'
 import React from 'react'
 import { BlurImage } from '../blur-image'
-import { useSong } from './songs.store'
 
 const SongsContextMenu = React.lazy(() => import('./songs.context-menu'))
 
@@ -21,6 +24,9 @@ export const SongsItem = (props: SongsItemProps) => {
   const { index, songs, className, ...rest } = props
 
   const { playlist, currentIndex } = useMusicState()
+  const { isPlaying } = usePlayerState()
+  const { togglePlay, play } = usePlayerActions()
+  const { isMaxSm } = useBreakpoints()
 
   const song = songs[index]
 
@@ -28,35 +34,43 @@ export const SongsItem = (props: SongsItemProps) => {
 
   const isCurrentSong = currentSong?.id === song?.id
 
-  const { onChangeContext } = useSong()
+  const isSameSong = currentSong?.id === song?.id
 
-  const longPress = useLongPress(() => onChangeContext(true))
+  const handlePlay = () => {
+    if (!isMaxSm) return
+
+    if (isPlaying && isSameSong) {
+      togglePlay()
+    } else {
+      play?.(songs, index)
+    }
+  }
 
   return (
     <SongsContextMenu data={song}>
       <div
         className={cn(
-          'transition even:bg-background/10 odd:bg-background/30 hover:bg-foreground/5',
+          'transition odd:bg-background/30 even:bg-background/10 hover:bg-foreground/5 ',
           className,
         )}
+        onClick={handlePlay}
         {...rest}
-        {...longPress}
       >
         <div
           className={cn(
-            'group flex items-center gap-3 p-2.5 md:gap-5 px-2 sm:px-5 text-sm',
+            'group flex items-center gap-3 p-2.5 px-2 text-sm sm:px-5 md:gap-5',
             isCurrentSong && 'bg-background/40',
             className,
           )}
           {...rest}
         >
-          <div className="w-10 flex items-center justify-center shrink-0 max-sm:hidden">
+          <div className="flex w-10 shrink-0 items-center justify-center max-sm:hidden">
             <div
-              className={cn('group-hover:hidden text-muted-foreground', {
+              className={cn('text-muted-foreground group-hover:hidden', {
                 hidden: isCurrentSong,
               })}
             >
-              {index}
+              {index + 1}
             </div>
 
             <div
@@ -68,26 +82,26 @@ export const SongsItem = (props: SongsItemProps) => {
             </div>
           </div>
 
-          <div className="overflow-hidden rounded-lg shrink-0">
+          <div className="shrink-0 overflow-hidden rounded-lg">
             <BlurImage
               width={40}
               height={40}
-              className="size-10 aspect-square scale-125 object-cover select-none"
+              className="aspect-square size-10 scale-125 select-none object-cover"
               src={`https://img.youtube.com/vi/${song?.youtubeId}/0.jpg`}
               alt={song?.name}
             />
           </div>
 
-          <div className="flex flex-col sm:flex-row flex-1">
+          <div className="flex flex-1 flex-col sm:flex-row">
             <div
-              className={cn('flex-1 line-clamp-1 font-medium', {
+              className={cn('line-clamp-1 flex-1 font-medium', {
                 'text-primary': isCurrentSong,
               })}
             >
               {song?.name}
             </div>
 
-            <div className="w-full max-sm:text-muted-foreground sm:max-w-[35%] line-clamp-1 text-xs text-muted-foreground">
+            <div className="line-clamp-1 w-full text-muted-foreground text-xs max-sm:text-muted-foreground sm:max-w-[35%]">
               {song?.singer}
             </div>
           </div>

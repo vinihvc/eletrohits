@@ -53,7 +53,7 @@ export const AlbumCard = ({ album }: AlbumCardProps) => {
       onTouchStart={handleMouseEnter}
       onMouseEnter={handleMouseEnter}
     >
-      <div className="relative size-full transition-all group-focus-visible:ring-2 ring-primary ring-offset-2 ring-offset-background aspect-square rounded-xl overflow-hidden">
+      <div className="relative aspect-square size-full overflow-hidden rounded-xl ring-primary ring-offset-2 ring-offset-background transition-all group-focus-visible:ring-2">
         <Image
           src={`/img/albums/${album.id}.webp`}
           alt={album.name}
@@ -63,11 +63,11 @@ export const AlbumCard = ({ album }: AlbumCardProps) => {
           fill
         />
 
-        <div className="group-hover:opacity-100 opacity-0 absolute left-0 top-0 hidden size-full items-center justify-center transition-all sm:flex">
+        <div className="absolute top-0 left-0 hidden size-full items-center justify-center opacity-0 transition-all group-hover:opacity-100 sm:flex">
           <Button
             tabIndex={-1}
             variant="ghost"
-            className="size-14 bg-black/60 text-white hover:bg-black hover:scale-105"
+            className="size-14 bg-black/60 text-white hover:scale-105 hover:bg-black"
             onClick={handleClick}
           >
             {React.cloneElement(isPlayingAlbum ? <Pause /> : <Play />, {
@@ -78,7 +78,7 @@ export const AlbumCard = ({ album }: AlbumCardProps) => {
       </div>
 
       <div className="flex h-[40px] flex-col justify-center md:h-[60px]">
-        <div className="hidden text-[10px] font-medium uppercase text-muted-foreground md:block">
+        <div className="hidden font-medium text-[10px] text-muted-foreground uppercase md:block">
           Album
         </div>
 

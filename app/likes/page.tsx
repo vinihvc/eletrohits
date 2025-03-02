@@ -12,7 +12,7 @@ const LibraryPage = () => {
   const hasLiked = liked.length > 0
 
   return (
-    <div className="container pt-20 sm:py-40 space-y-10">
+    <div className="container space-y-10 pt-20 sm:py-40">
       <AlbumInfo
         album={{
           id: 0,
@@ -25,7 +25,7 @@ const LibraryPage = () => {
 
       {!hasLiked && (
         <div className="space-y-5">
-          <div className="text-base font-medium">
+          <div className="font-medium text-base">
             Nothing in your library yet, go discover!
           </div>
 

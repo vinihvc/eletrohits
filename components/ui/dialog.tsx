@@ -21,7 +21,7 @@ export const DialogOverlay = React.forwardRef<
   <DialogPrimitive.Overlay
     ref={ref}
     className={cn(
-      'fixed inset-0 z-50 bg-black/80 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0',
+      'data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-black/80 data-[state=closed]:animate-out data-[state=open]:animate-in',
       className,
     )}
     {...props}
@@ -32,10 +32,10 @@ DialogOverlay.displayName = DialogPrimitive.Overlay.displayName
 
 const dialogVariants = cva({
   base: [
-    'fixed z-40 grid w-full max-h-dvh',
+    'fixed z-40 grid max-h-dvh w-full',
     'gap-4 border bg-background p-6 shadow-lg',
-    'data-[state=open]:animate-in data-[state=closed]:animate-out',
-    'data-[state=open]:duration-500 data-[state=closed]:duration-300',
+    'data-[state=closed]:animate-out data-[state=open]:animate-in',
+    'data-[state=closed]:duration-300 data-[state=open]:duration-500',
   ],
   variants: {
     side: {
@@ -84,7 +84,7 @@ export const DialogTitle = React.forwardRef<
   <DialogPrimitive.Title
     ref={ref}
     className={cn(
-      'text-lg font-semibold leading-none tracking-tight',
+      'font-semibold text-lg leading-none tracking-tight',
       className,
     )}
     {...props}
@@ -99,7 +99,7 @@ export const DialogDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <DialogPrimitive.Description
     ref={ref}
-    className={cn('text-sm text-muted-foreground', className)}
+    className={cn('text-muted-foreground text-sm', className)}
     {...props}
   />
 ))

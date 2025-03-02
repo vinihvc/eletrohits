@@ -33,19 +33,19 @@ const Player = (props: PlayerProps) => {
       )}
     >
       <div className={cn('flex border-t-2 bg-background', className)} {...rest}>
-        <div className="container w-full relative">
+        <div className="container relative w-full">
           <PlayerProgress />
 
-          <div className="flex flex-1 items-center justify-between py-2 md:py-3 sm:gap-5">
-            <div className="flex items-center gap-4 basis-1/2">
+          <div className="flex flex-1 items-center justify-between py-2 sm:gap-5 md:py-3">
+            <div className="flex basis-1/2 items-center gap-4">
               <PlayerSongInfo />
             </div>
 
-            <div className="flex sm:flex-1 items-center justify-end gap-2 sm:justify-center basis-1/2">
+            <div className="flex basis-1/2 items-center justify-end gap-2 sm:flex-1 sm:justify-center">
               <PlayerActions />
             </div>
 
-            <div className="hidden items-center sm:flex justify-end gap-4 basis-1/2">
+            <div className="hidden basis-1/2 items-center justify-end gap-4 sm:flex">
               <PlayerPlaylist className="shrink-0" />
 
               <div className="flex gap-4">

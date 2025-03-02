@@ -48,7 +48,7 @@ export const HeaderNavigation = (props: HeaderNavigationProps) => {
       <Button variant="ghost" size="sm" className="gap-2" asChild>
         <NavLink
           href="/party"
-          className="dark:text-muted-foreground hover:text-foreground [&.active]:bg-primary [&.active]:text-white"
+          className="hover:text-foreground dark:text-muted-foreground [&.active]:bg-primary [&.active]:text-white"
         >
           <PartyPopper className="size-4" />
           Party
@@ -58,11 +58,11 @@ export const HeaderNavigation = (props: HeaderNavigationProps) => {
       <Button variant="ghost" size="sm" className="gap-2" asChild>
         <NavLink
           href="/likes"
-          className="group dark:text-muted-foreground hover:text-foreground [&.active]:bg-primary [&.active]:text-white"
+          className="group hover:text-foreground dark:text-muted-foreground [&.active]:bg-primary [&.active]:text-white"
         >
           <Disc3
             className={cn('size-4', {
-              'text-primary animate-spin group-[&.active]:animate-none group-[&.active]:text-white':
+              'animate-spin text-primary group-[&.active]:animate-none group-[&.active]:text-white':
                 animate,
             })}
           />

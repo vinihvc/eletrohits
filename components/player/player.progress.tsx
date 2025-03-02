@@ -14,7 +14,7 @@ export const PlayerProgress = () => {
   }
 
   return (
-    <div className="absolute inset-x-0 -top-2.5 flex">
+    <div className="-top-2.5 absolute inset-x-0 flex">
       <Slider
         className="py-2"
         value={[progress]}

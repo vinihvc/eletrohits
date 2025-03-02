@@ -25,7 +25,6 @@ export const AlbumInfo = (props: AlbumInfoProps) => {
 
   const { play, playRandom, togglePlay } = usePlayerActions()
   const { playlist, currentIndex } = useMusicState()
-
   const { isPlaying } = usePlayerState()
 
   const currentSong = playlist?.[currentIndex]
@@ -55,22 +54,22 @@ export const AlbumInfo = (props: AlbumInfoProps) => {
         alt={album.name}
         width={150}
         height={150}
-        className="relative size-36 justify-center rounded-xl sm:size-48 sm:justify-start drop-shadow"
+        className="relative size-36 justify-center rounded-xl drop-shadow sm:size-48 sm:justify-start"
       />
 
       <div className="relative max-sm:text-center">
-        <span className="text-xs font-medium uppercase text-muted-foreground">
+        <span className="font-medium text-muted-foreground text-xs uppercase">
           Album
         </span>
 
-        <h2 className="text-lg font-bold sm:text-xl">{album.name}</h2>
+        <h2 className="font-bold text-lg sm:text-xl">{album.name}</h2>
 
         {album.songs?.length !== 0 && (
           <div className="text-sm opacity-80">{`${album.songs?.length ?? 0} tracks`}</div>
         )}
 
         {album.songs?.length !== 0 && (
-          <div className="flex gap-4 mt-4">
+          <div className="mt-4 flex gap-4">
             <Button size="lg" className="w-[125px]" onClick={handlePlay}>
               {React.cloneElement(
                 hasSongInAlbum && isPlaying ? <Pause /> : <Play />,

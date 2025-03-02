@@ -3,7 +3,6 @@
 	"authors": "Vinicius Vicentini <@vinihvc>",
 	"version": "2.0.0",
 	"private": true,
-	"packageManager": "pnpm@9.12.2",
 	"engines": {
 		"node": ">=20"
 	},
@@ -11,51 +10,45 @@
 		"dev": "next dev --turbo",
 		"build": "next build",
 		"start": "next start",
-		"format": "biome format",
-		"format:fix": "biome format --write",
-		"lint": "biome lint",
-		"lint:fix": "biome lint --write",
-		"preinstall": "npx only-allow pnpm"
+		"lint": "biome lint ./",
+		"lint:fix": "biome lint ./ --write",
+		"format": "biome format ./",
+		"format:fix": "biome format ./ --write"
 	},
 	"dependencies": {
-		"@icons-pack/react-simple-icons": "^10.0.0",
-		"@lottiefiles/dotlottie-react": "^0.9.1",
-		"@radix-ui/react-context-menu": "^2.2.2",
-		"@radix-ui/react-dialog": "1.1.2-rc.14",
-		"@radix-ui/react-dropdown-menu": "^2.1.2",
-		"@radix-ui/react-portal": "^1.1.2",
-		"@radix-ui/react-scroll-area": "1.2.0-rc.21",
-		"@radix-ui/react-slider": "^1.2.1",
-		"@radix-ui/react-slot": "^1.1.0",
+		"@icons-pack/react-simple-icons": "^12.0.0",
+		"@lottiefiles/dotlottie-react": "^0.13.0",
+		"@radix-ui/react-context-menu": "^2.2.6",
+		"@radix-ui/react-dialog": "1.1.6",
+		"@radix-ui/react-dropdown-menu": "^2.1.6",
+		"@radix-ui/react-portal": "^1.1.4",
+		"@radix-ui/react-scroll-area": "1.2.3",
+		"@radix-ui/react-slider": "^1.2.3",
+		"@radix-ui/react-slot": "^1.1.2",
+		"babel-plugin-react-compiler": "^19.0.0-beta-e1e972c-20250221",
 		"cva": "1.0.0-beta.1",
-		"lucide-react": "^0.453.0",
-		"next": "15.0.0-rc.1",
-		"next-themes": "^0.3.0",
+		"lucide-react": "^0.477.0",
+		"next": "15.2.0",
+		"next-themes": "^0.4.4",
 		"nextjs-google-analytics": "^2.3.7",
-		"react": "19.0.0-rc-cd22717c-20241013",
+		"react": "19.0.0",
 		"react-canvas-confetti": "^2.0.7",
-		"react-dom": "19.0.0-rc-cd22717c-20241013",
+		"react-dom": "19.0.0",
 		"react-player": "^2.16.0",
-		"react-remove-scroll": "^2.6.0",
-		"sharp": "^0.33.5",
-		"tailwind-merge": "^2.5.4",
-		"vaul": "^1.1.0",
+		"react-remove-scroll": "^2.6.3",
+		"tailwind-merge": "^3.0.2",
+		"vaul": "^1.1.2",
 		"zustand": "^4.5.5"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^1.9.3",
-		"@types/node": "^22.7.5",
-		"@types/react": "npm:types-react@19.0.0-rc.1",
-		"@types/react-dom": "^18.3.1",
+		"@biomejs/biome": "^1.9.4",
+		"@types/node": "^22.13.8",
+		"@types/react": "^19.0.4",
+		"@types/react-dom": "^19.0.4",
 		"autoprefixer": "^10.4.20",
 		"postcss": "^8.4.47",
 		"tailwindcss": "^3.4.14",
 		"tailwindcss-animate": "^1.0.7",
-		"typescript": "^5.6.3"
-	},
-	"pnpm": {
-		"overrides": {
-			"@types/react": "npm:types-react@19.0.0-rc.1"
-		}
+		"typescript": "^5.8.2"
 	}
 }

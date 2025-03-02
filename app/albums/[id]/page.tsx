@@ -64,7 +64,7 @@ const AlbumsPage = async (props: AlbumsPageProps) => {
     <>
       <BlurBackground src={`/img/albums/${album.id}.webp`} />
 
-      <div className="container space-y-10 pt-20 sm:py-40">
+      <div className="container space-y-10 py-20 sm:py-40">
         <AlbumInfo
           album={{ ...album, thumb: `/img/albums/${album.id}.webp` }}
         />

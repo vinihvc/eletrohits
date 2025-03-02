@@ -22,8 +22,8 @@ export const Songs = (props: SongsProps) => {
         'relative overflow-hidden',
         'rounded-lg',
         'divide-y divide-border/60',
-        'border border-border/60 black:border-border/20',
-        'animate-in fade-in',
+        'border black:border-border/20 border-border/60',
+        'fade-in animate-in',
         className,
       )}
       {...rest}

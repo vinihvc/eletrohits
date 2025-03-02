@@ -11,14 +11,14 @@ export const BlurBackground = (props: BlurBackgroundProps) => {
   return (
     <div
       className={cn(
-        'absolute inset-0 h-dvh opacity-60 dark:opacity-20 -z-[1] overflow-clip',
+        '-z-[1] absolute inset-0 h-dvh overflow-clip opacity-60 dark:opacity-20',
         className,
       )}
       {...rest}
     >
       {hasImage && (
         <Image
-          className="object-cover blur-xl scale-125"
+          className="scale-125 object-cover blur-xl"
           src={src}
           sizes="(max-width: 768px) 100vw, 33vw"
           aria-hidden

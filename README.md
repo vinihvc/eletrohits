@@ -20,7 +20,7 @@ To run Eletrohits locally, follow these steps:
 1. Clone the repository
 2. Install dependencies:
    ```bash
-   pnpm install
+   bun install
    ```
 3. Copy the `.env.example` file to `.env` and update the variables:
    ```bash
@@ -28,7 +28,7 @@ To run Eletrohits locally, follow these steps:
    ```
 4. Start the development server:
    ```bash
-   pnpm dev
+   bun dev
    ```
 5. Open [http://localhost:3000](http://localhost:3000) in your browser
 

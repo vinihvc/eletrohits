@@ -57,21 +57,25 @@ export const SongsTypeMenu = (props: SongsTypeMenuProps) => {
           {labelLike}
         </ComponentItem>
 
-        <ComponentItem
-          className="gap-2"
-          onClick={() => handleAddToQueue('next')}
-        >
-          <ListStart className="size-4" />
-          Play next
-        </ComponentItem>
+        {!isInQueue && (
+          <>
+            <ComponentItem
+              className="gap-2"
+              onClick={() => handleAddToQueue('next')}
+            >
+              <ListStart className="size-4" />
+              Play next
+            </ComponentItem>
 
-        <ComponentItem
-          className="gap-2"
-          onClick={() => handleAddToQueue('last')}
-        >
-          <ListPlus className="size-4" />
-          Add to queue
-        </ComponentItem>
+            <ComponentItem
+              className="gap-2"
+              onClick={() => handleAddToQueue('last')}
+            >
+              <ListPlus className="size-4" />
+              Add to queue
+            </ComponentItem>
+          </>
+        )}
 
         {isInQueue && (
           <ComponentItem className="gap-2" onClick={handleRemoveFromQueue}>

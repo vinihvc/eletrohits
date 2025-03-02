@@ -12,7 +12,7 @@ export const Logo = (props: LogoProps) => {
     <div
       role="img"
       className={cn(
-        'flex items-center gap-2 text-lg font-semibold tracking-wide select-none',
+        'flex select-none items-center gap-2 font-semibold text-lg tracking-wide',
         className,
       )}
       {...rest}

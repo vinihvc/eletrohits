@@ -15,12 +15,12 @@ export const Header = (props: HeaderProps) => {
 
   return (
     <header
-      className={cn('z-10 sm:absolute top-0 sm:top-5 inset-x-0', className)}
+      className={cn('inset-x-0 top-0 z-10 sm:absolute sm:top-5', className)}
       {...rest}
     >
-      <div className="container sm:bg-background/40 sm:dark:bg-background/80 sm:backdrop-blur sm:rounded-xl flex h-14 items-center justify-between">
+      <div className="container flex h-14 items-center justify-between sm:rounded-xl sm:bg-background/40 sm:backdrop-blur sm:dark:bg-background/80">
         <Link
-          className="inline-flex focus:outline-none focus-visible:ring-2 focus-visible:ring-primary ring-offset-4 ring-offset-background rounded-full"
+          className="inline-flex rounded-full ring-offset-4 ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
           href="/"
         >
           <Logo />

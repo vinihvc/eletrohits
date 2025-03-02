@@ -1,30 +1,30 @@
-"use client";
+'use client'
 
-import { cn } from "@/lib/utils";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import { cn } from '@/lib/utils'
+import { DotLottieReact } from '@lottiefiles/dotlottie-react'
 
 interface LottiePlayerProps
   extends React.ComponentProps<typeof DotLottieReact> {
   /**
    * Path to the animation file
    */
-  path: string;
+  path: string
   /**
    * Whether the animation should loop
    *
    * @default true
    */
-  loop?: boolean;
+  loop?: boolean
   /**
    * Whether the animation should autoplay
    *
    * @default true
    */
-  autoplay?: boolean;
+  autoplay?: boolean
 }
 
 const LottiePlayer = (props: LottiePlayerProps) => {
-  const { path, loop = true, autoplay = true, className, ...rest } = props;
+  const { path, loop = true, autoplay = true, className, ...rest } = props
 
   return (
     <DotLottieReact
@@ -34,7 +34,7 @@ const LottiePlayer = (props: LottiePlayerProps) => {
       autoplay={autoplay}
       {...rest}
     />
-  );
-};
+  )
+}
 
-export default LottiePlayer;
+export default LottiePlayer

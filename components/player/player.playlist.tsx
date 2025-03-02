@@ -72,31 +72,31 @@ const PlayerPlaylist = (props: PlayerPlaylistProps) => {
           Manage your playlist
         </DrawerDescription>
 
-        <DrawerClose className="max-sm:hidden absolute right-3 top-3" asChild>
+        <DrawerClose className="absolute top-3 right-3 max-sm:hidden" asChild>
           <Button variant="ghost">
             <ChevronDown className="size-4" />
             Minimize
           </Button>
         </DrawerClose>
 
-        <div className="h-dvh container flex max-md:flex-wrap py-10 md:pt-20 md:pb-40 gap-5">
-          <div className="w-full flex flex-col items-center justify-center gap-5">
-            <div className="overflow-hidden rounded-xl size-64">
+        <div className="container flex h-dvh gap-5 py-10 max-md:flex-wrap md:pt-20 md:pb-40">
+          <div className="flex w-full flex-col items-center justify-center gap-5">
+            <div className="size-64 overflow-hidden rounded-xl">
               <Image
                 src={`https://img.youtube.com/vi/${currentSong?.youtubeId}/0.jpg`}
                 alt={currentSong?.name ?? ''}
                 width={256}
                 height={256}
-                className="size-full object-cover scale-125 pointer-events-none"
+                className="pointer-events-none size-full scale-125 object-cover"
               />
             </div>
 
             <div className="text-center">
-              <h2 className="text-lg font-bold sm:text-xl">
+              <h2 className="font-bold text-lg sm:text-xl">
                 {currentSong?.name}
               </h2>
 
-              <div className="text-sm text-muted-foreground">
+              <div className="text-muted-foreground text-sm">
                 {currentSong?.singer}
               </div>
             </div>

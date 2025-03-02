@@ -15,7 +15,7 @@ const PartyPage = () => {
   return (
     <PartyBackground
       className={cn(
-        'flex items-center flex-1 justify-center',
+        'flex flex-1 items-center justify-center',
         RemoveScroll.classNames.fullWidth,
       )}
     >

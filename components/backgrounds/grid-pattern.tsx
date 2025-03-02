@@ -28,10 +28,10 @@ export const GridPattern = (props: GridPatternProps) => {
   const id = useId()
 
   return (
-    (<svg
+    <svg
       aria-hidden="true"
       className={cn(
-        'pointer-events-none fixed inset-0 size-full z-[-1] fill-card-forestroke-card-foreground/10 stroke-card-foreground/10 dark:fill-card-forestroke-card-foreground/5 dark:stroke-card-foreground/5',
+        'pointer-events-none fixed inset-0 z-[-1] size-full fill-card-forestroke-card-foreground/10 stroke-card-foreground/10 dark:fill-card-forestroke-card-foreground/5 dark:stroke-card-foreground/5',
         className,
       )}
       {...rest}
@@ -55,7 +55,7 @@ export const GridPattern = (props: GridPatternProps) => {
       <rect width="100%" height="100%" strokeWidth={0} fill={`url(#${id})`} />
       {squares && (
         // biome-ignore lint/a11y/noSvgWithoutTitle: <explanation>
-        (<svg x={x} y={y} className="overflow-visible">
+        <svg x={x} y={y} className="overflow-visible">
           {squares.map(([x, y]) => (
             <rect
               strokeWidth="0"
@@ -66,10 +66,10 @@ export const GridPattern = (props: GridPatternProps) => {
               y={y * height + 1}
             />
           ))}
-        </svg>)
+        </svg>
       )}
-    </svg>)
-  );
+    </svg>
+  )
 }
 
 export default GridPattern

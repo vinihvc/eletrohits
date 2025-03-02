@@ -39,12 +39,6 @@ export const PlayButton = (props: PlayButtonProps) => {
   const isSameSong = currentSong?.id === song?.id
 
   const handleClick = () => {
-    console.log('click', {
-      isPlaying,
-      isSameSong,
-      index,
-    })
-
     if (isPlaying && isSameSong) {
       togglePlay()
     } else {

@@ -1,10 +1,9 @@
-import { type VariantProps, cva } from 'cva'
+import { type VariantProps, tv } from 'tailwind-variants'
 import React from 'react'
-
 import { cn } from '@/lib/utils'
 import { Slot } from '@radix-ui/react-slot'
 
-export const buttonVariants = cva({
+export const buttonVariants = tv({
   base: [
     'inline-flex items-center justify-center',
     'gap-2',

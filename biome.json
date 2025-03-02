@@ -33,7 +33,7 @@
 					"level": "warn",
 					"options": {
 						"attributes": ["classList"],
-						"functions": ["cn", "cva", "tw"]
+						"functions": ["cn", "tv", "tw"]
 					}
 				}
 			}

@@ -2,9 +2,8 @@
 
 import * as DialogPrimitive from '@radix-ui/react-dialog'
 import * as React from 'react'
-
 import { cn } from '@/lib/utils'
-import { type VariantProps, cva } from 'cva'
+import { type VariantProps, tv } from 'tailwind-variants'
 
 export const Dialog = DialogPrimitive.Root
 
@@ -30,7 +29,7 @@ export const DialogOverlay = React.forwardRef<
 
 DialogOverlay.displayName = DialogPrimitive.Overlay.displayName
 
-const dialogVariants = cva({
+const dialogVariants = tv({
   base: [
     'fixed z-40 grid max-h-dvh w-full',
     'gap-4 border bg-background p-6 shadow-lg',

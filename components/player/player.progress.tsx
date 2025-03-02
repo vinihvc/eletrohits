@@ -10,7 +10,9 @@ export const PlayerProgress = () => {
   const handleOnProgress = (value: number[]) => {
     const [progress] = value
 
-    handleProgress(progress)
+    if (progress) {
+      handleProgress(progress)
+    }
   }
 
   return (

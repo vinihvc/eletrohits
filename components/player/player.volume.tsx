@@ -11,7 +11,9 @@ export const PlayerVolume = () => {
   const handleOnProgress = (value: number[]) => {
     const [progress] = value
 
-    changeVolume(progress)
+    if (progress) {
+      changeVolume(progress)
+    }
   }
 
   return (

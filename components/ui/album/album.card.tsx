@@ -67,7 +67,7 @@ export const AlbumCard = ({ album }: AlbumCardProps) => {
           <Button
             tabIndex={-1}
             variant="ghost"
-            className="h-14 w-1 bg-black/60 text-white hover:scale-105 hover:bg-black"
+            className="h-14 w-14 bg-black/60 text-white hover:scale-105 hover:bg-black"
             onClick={handleClick}
           >
             {React.cloneElement(isPlayingAlbum ? <Pause /> : <Play />, {

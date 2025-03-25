@@ -81,7 +81,7 @@ const PlayerPlaylist = (props: PlayerPlaylistProps) => {
 
         <div className="container flex h-dvh gap-5 py-10 max-md:flex-wrap md:pt-20 md:pb-40">
           <div className="flex w-full flex-col items-center justify-center gap-5">
-            <div className="h-64 w-6 overflow-hidden rounded-xl">
+            <div className="h-64 w-64 overflow-hidden rounded-xl">
               <Image
                 src={`https://img.youtube.com/vi/${currentSong?.youtubeId}/0.jpg`}
                 alt={currentSong?.name ?? ''}

@@ -51,7 +51,7 @@ export const SongsItem = (props: SongsItemProps) => {
     <SongsContextMenu data={song}>
       <div
         className={cn(
-          'transition odd:bg-background/30 even:bg-background/10 hover:bg-foreground/5 ',
+          'transition odd:bg-background/30 even:bg-background/10 hover:bg-foreground/5',
           className,
         )}
         onClick={handlePlay}
@@ -87,7 +87,7 @@ export const SongsItem = (props: SongsItemProps) => {
             <BlurImage
               width={40}
               height={40}
-              className="aspect-square h-10 w-1 scale-125 select-none object-cover"
+              className="aspect-square h-10 w-10 scale-125 select-none object-cover"
               src={`https://img.youtube.com/vi/${song?.youtubeId}/0.jpg`}
               alt={song?.name}
             />

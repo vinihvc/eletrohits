@@ -1,15 +1,12 @@
-import tailwindConfig from '@/tailwind.config'
 import React from 'react'
-import resolveConfig from 'tailwindcss/resolveConfig'
 
-const {
-  theme: { screens },
-} = resolveConfig(tailwindConfig)
-
-// Define breakpoints based on Tailwind's default breakpoints
-const breakpoints = Object.fromEntries(
-  Object.entries(screens).map(([key, value]) => [key, Number.parseInt(value)]),
-)
+const breakpoints = {
+  sm: 640,
+  md: 768,
+  lg: 1024,
+  xl: 1280,
+  '2xl': 1536,
+} as const
 
 type Breakpoint = keyof typeof breakpoints
 

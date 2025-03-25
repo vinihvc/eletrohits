@@ -11,7 +11,7 @@ export const BlurBackground = (props: BlurBackgroundProps) => {
   return (
     <div
       className={cn(
-        '-z-[1] absolute inset-0 h-dvh overflow-clip opacity-60 dark:opacity-20',
+        '-z-1 absolute inset-0 h-dvh overflow-clip opacity-60 dark:opacity-20',
         className,
       )}
       {...rest}
@@ -28,7 +28,7 @@ export const BlurBackground = (props: BlurBackgroundProps) => {
         />
       )}
 
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background" />
+      <div className="absolute inset-0 bg-linear-to-b from-transparent to-background" />
     </div>
   )
 }

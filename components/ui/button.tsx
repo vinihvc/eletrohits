@@ -10,7 +10,7 @@ export const buttonVariants = tv({
     'font-medium sm:text-xs',
     'rounded-full',
     'transition-all',
-    'outline-none ring-offset-2 ring-offset-background focus-visible:ring-2',
+    'outline-hidden ring-offset-2 ring-offset-background focus-visible:ring-2',
     'gap-2 [&_svg]:pointer-events-none [&_svg]:h-4 [&_svg]:w-4',
     'disabled:pointer-events-none disabled:opacity-50',
   ],

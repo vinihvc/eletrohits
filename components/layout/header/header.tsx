@@ -17,9 +17,9 @@ export const Header = (props: HeaderProps) => {
       className={cn('inset-x-0 top-0 z-10 sm:absolute sm:top-5', className)}
       {...rest}
     >
-      <div className="container flex h-14 items-center justify-between sm:rounded-xl sm:bg-background/40 sm:backdrop-blur sm:dark:bg-background/80">
+      <div className="container flex h-14 items-center justify-between sm:rounded-xl sm:bg-background/40 sm:backdrop-blur-sm sm:dark:bg-background/80">
         <NavLink
-          className="inline-flex rounded-full ring-offset-4 ring-offset-background focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+          className="inline-flex rounded-full ring-offset-4 ring-offset-background focus:outline-hidden focus-visible:ring-2 focus-visible:ring-primary"
           href="/"
         >
           <Logo />

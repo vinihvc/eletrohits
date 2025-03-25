@@ -15,7 +15,7 @@ const HomePage = async () => {
           {data?.map((album) => (
             <NavLink
               key={album.id}
-              className="group outline-none"
+              className="group outline-hidden"
               href={`/albums/${album.id}`}
               aria-label={`View ${album.name}`}
             >

@@ -1,18 +1,101 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
-html {
-	-webkit-tap-highlight-color: transparent;
-	@apply scroll-smooth max-sm:select-none;
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+	--font-sans: var(--font-sans), sans-serif;
+
+	--color-border: hsl(var(--border));
+	--color-input: hsl(var(--input));
+	--color-ring: hsl(var(--ring));
+	--color-background: hsl(var(--background));
+	--color-foreground: hsl(var(--foreground));
+
+	--color-primary: hsl(var(--primary));
+	--color-primary-foreground: hsl(var(--primary-foreground));
+
+	--color-secondary: hsl(var(--secondary));
+	--color-secondary-foreground: hsl(var(--secondary-foreground));
+
+	--color-destructive: hsl(var(--destructive));
+	--color-destructive-foreground: hsl(var(--destructive-foreground));
+
+	--color-muted: hsl(var(--muted));
+	--color-muted-foreground: hsl(var(--muted-foreground));
+
+	--color-accent: hsl(var(--accent));
+	--color-accent-foreground: hsl(var(--accent-foreground));
+
+	--color-popover: hsl(var(--popover));
+	--color-popover-foreground: hsl(var(--popover-foreground));
+
+	--color-card: hsl(var(--card));
+	--color-card-foreground: hsl(var(--card-foreground));
+
+	--color-color-1: hsl(var(--color-1));
+	--color-color-2: hsl(var(--color-2));
+	--color-color-3: hsl(var(--color-3));
+	--color-color-4: hsl(var(--color-4));
+	--color-color-5: hsl(var(--color-5));
+
+	--radius-lg: var(--radius);
+	--radius-md: calc(var(--radius) - 2px);
+	--radius-sm: calc(var(--radius) - 4px);
+
+	--animate-rainbow: rainbow var(--speed, 4s) infinite linear;
+
+	@keyframes rainbow {
+		0% {
+			background-position: 0%;
+		}
+		100% {
+			background-position: 200%;
+		}
+	}
 }
 
-body {
-	@apply flex flex-col flex-1 min-h-dvh bg-background text-foreground font-sans antialiased overflow-y-scroll;
+@utility container {
+	margin-inline: auto;
+	padding-inline: 1rem;
+	@media (width >= --theme(--breakpoint-sm)) {
+		max-width: none;
+	}
+	@media (width >= 1024px) {
+		max-width: 1024px;
+	}
 }
 
-main {
-	@apply flex flex-col flex-1;
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+	*,
+	::after,
+	::before,
+	::backdrop,
+	::file-selector-button {
+		border-color: var(--color-gray-200, currentColor);
+	}
+}
+
+@layer utilities {
+	html {
+		-webkit-tap-highlight-color: transparent;
+		@apply scroll-smooth max-sm:select-none;
+	}
+
+	body {
+		@apply flex flex-col flex-1 min-h-dvh bg-background text-foreground font-sans antialiased overflow-y-scroll;
+	}
+
+	main {
+		@apply flex flex-col flex-1;
+	}
 }
 
 @layer base {
@@ -79,7 +162,7 @@ main {
 
 @layer base {
 	* {
-		@apply border-border;
+		@apply border-border outline-ring/50;
 	}
 
 	body {

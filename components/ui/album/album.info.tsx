@@ -53,7 +53,7 @@ export const AlbumInfo = (props: AlbumInfoProps) => {
         alt={album.name}
         width={150}
         height={150}
-        className="relative h-36 w-36 justify-center rounded-xl drop-shadow sm:h-48 sm:w-48 sm:justify-start"
+        className="relative h-36 w-36 justify-center rounded-xl drop-shadow-sm sm:h-48 sm:w-48 sm:justify-start"
       />
 
       <div className="relative max-sm:text-center">

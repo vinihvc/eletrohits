@@ -7,7 +7,7 @@ const LottiePlayer = dynamic(() => import('@/components/ui/lottie'))
 const NotFoundPage = () => {
   return (
     <div className="flex flex-1 items-center justify-center">
-      <div className="container relative flex max-w-screen-md flex-1 flex-col py-20">
+      <div className="container relative flex max-w-(--breakpoint-md) flex-1 flex-col py-20">
         <div className="order-2 flex flex-col gap-5">
           <div>
             <output className="font-medium text-sm">Error 404</output>
@@ -29,7 +29,7 @@ const NotFoundPage = () => {
         </div>
 
         <LottiePlayer
-          className="-z-[1] inset-0 order-1 h-full w-full sm:absolute"
+          className="-z-1 inset-0 order-1 h-full w-full sm:absolute"
           path="/lottie/astronaut.lottie"
         />
       </div>

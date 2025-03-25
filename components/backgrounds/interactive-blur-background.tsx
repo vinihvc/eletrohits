@@ -1,10 +1,9 @@
 'use client'
 
-import React from 'react'
-import { BlurBackground } from './blur-background'
-
 import { useBypassFirstRender } from '@/hooks/use-bypass-first-render'
+import React from 'react'
 import { create } from 'zustand'
+import { BlurBackground } from './blur-background'
 
 const TRANSITION_DURATION = 0.5
 

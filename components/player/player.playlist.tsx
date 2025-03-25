@@ -1,16 +1,7 @@
 'use client'
 
-import { BlurBackground } from '@/components/backgrounds/blur-background'
-import { Songs } from '@/components/ui/songs'
-import {
-  useMusicState,
-  usePlayerActions,
-  usePlayerState,
-} from '@/store/app.store'
-
-import { ChevronDown, ListVideo } from 'lucide-react'
-
 import { USER_ALBUM } from '@/app/likes/data'
+import { BlurBackground } from '@/components/backgrounds/blur-background'
 import { Button, type ButtonProps } from '@/components/ui/button'
 import {
   Drawer,
@@ -20,6 +11,13 @@ import {
   DrawerTitle,
   DrawerTrigger,
 } from '@/components/ui/drawer'
+import { Songs } from '@/components/ui/songs'
+import {
+  useMusicState,
+  usePlayerActions,
+  usePlayerState,
+} from '@/store/app.store'
+import { ChevronDown, ListVideo } from 'lucide-react'
 import Image from 'next/image'
 import React from 'react'
 import { ScrollArea } from '../ui/scroll-area'

@@ -1,7 +1,5 @@
 'use client'
 
-import { Pause, Play, Shuffle } from 'lucide-react'
-
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import {
@@ -10,6 +8,7 @@ import {
   usePlayerState,
 } from '@/store/app.store'
 import type { AlbumType } from '@/types/album'
+import { Pause, Play, Shuffle } from 'lucide-react'
 import Image from 'next/image'
 import React from 'react'
 

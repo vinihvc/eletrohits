@@ -1,7 +1,5 @@
 'use client'
 
-import { Pause, Play } from 'lucide-react'
-
 import { useInteractiveBlurBackgroundStore } from '@/components/backgrounds/interactive-blur-background'
 import {
   useMusicState,
@@ -9,6 +7,7 @@ import {
   usePlayerState,
 } from '@/store/app.store'
 import type { AlbumType } from '@/types/album'
+import { Pause, Play } from 'lucide-react'
 import Image from 'next/image'
 import React from 'react'
 import { Button } from '../button'

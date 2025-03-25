@@ -1,8 +1,5 @@
 'use client'
 
-import { Pause, Play } from 'lucide-react'
-import React from 'react'
-
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
 import {
@@ -11,6 +8,8 @@ import {
   usePlayerState,
 } from '@/store/app.store'
 import type { SongType } from '@/types/song'
+import { Pause, Play } from 'lucide-react'
+import React from 'react'
 
 interface PlayButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {

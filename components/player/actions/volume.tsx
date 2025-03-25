@@ -1,7 +1,6 @@
-import { Volume2, VolumeX } from 'lucide-react'
-
 import { Button } from '@/components/ui/button'
 import { usePlayerActions, usePlayerState } from '@/store/app.store'
+import { Volume2, VolumeX } from 'lucide-react'
 import React from 'react'
 
 export const VolumeButton = ({ ...props }) => {

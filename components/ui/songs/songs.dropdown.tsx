@@ -1,9 +1,8 @@
 'use client'
 
+import type { SongType } from '@/types/song'
 import { EllipsisVertical } from 'lucide-react'
 import { Button } from '../button'
-
-import type { SongType } from '@/types/song'
 import { useSong } from './songs.store'
 import { SongsTypeMenu } from './songs.type-menu'
 

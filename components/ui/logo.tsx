@@ -1,6 +1,5 @@
-import type React from 'react'
-
 import { cn } from '@/lib/utils'
+import type React from 'react'
 import { Music } from '../icons/music'
 
 interface LogoProps extends React.HTMLAttributes<HTMLDivElement> {}

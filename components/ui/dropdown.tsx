@@ -1,11 +1,9 @@
 'use client'
 
-import * as RPrimitive from '@radix-ui/react-dropdown-menu'
-
-import * as React from 'react'
-
 import { cn } from '@/lib/utils'
+import * as RPrimitive from '@radix-ui/react-dropdown-menu'
 import { Check, ChevronRight, Dot } from 'lucide-react'
+import * as React from 'react'
 
 const Dropdown = RPrimitive.Root
 

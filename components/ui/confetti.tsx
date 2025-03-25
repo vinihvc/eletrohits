@@ -2,7 +2,6 @@
 
 import { cn } from '@/lib/utils'
 import React from 'react'
-
 import ReactCanvasConfetti from 'react-canvas-confetti/dist/presets/photons'
 import type { TConductorInstance } from 'react-canvas-confetti/dist/types'
 

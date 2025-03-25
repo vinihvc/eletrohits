@@ -1,8 +1,7 @@
-import type ReactPlayer from 'react-player/youtube'
-import type { YouTubePlayerProps } from 'react-player/youtube'
-
 import type { SongType } from '@/types/song'
 import React from 'react'
+import type ReactPlayer from 'react-player/youtube'
+import type { YouTubePlayerProps } from 'react-player/youtube'
 import type { StateCreator } from 'zustand'
 import type { MusicSlice } from './music.slice'
 

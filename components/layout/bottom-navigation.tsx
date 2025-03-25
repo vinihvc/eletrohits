@@ -1,6 +1,5 @@
-import React from 'react'
-
 import { BOTTOM_NAVIGATION } from '@/constants/menu'
+import React from 'react'
 import { NavLink } from '../ui/nav-link'
 
 export const BottomNavigation = () => {

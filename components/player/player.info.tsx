@@ -1,7 +1,6 @@
 'use client'
 
 import { LikeButton } from '@/components/player/actions/like'
-
 import { useMusicState } from '@/store/app.store'
 import { BlurImage } from '../ui/blur-image'
 

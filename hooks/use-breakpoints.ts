@@ -1,6 +1,5 @@
-import React from 'react'
-
 import tailwindConfig from '@/tailwind.config'
+import React from 'react'
 import resolveConfig from 'tailwindcss/resolveConfig'
 
 const {

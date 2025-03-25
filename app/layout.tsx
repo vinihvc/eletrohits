@@ -1,13 +1,10 @@
 import { BottomNavigation } from '@/components/layout/bottom-navigation'
-
 import '@/styles/global.css'
-
-import type { Metadata } from 'next'
-
 import { Header } from '@/components/layout/header'
 import { SEO } from '@/constants/seo'
 import { fontSans } from '@/lib/font'
 import { cn } from '@/lib/utils'
+import type { Metadata } from 'next'
 import dynamic from 'next/dynamic'
 import type React from 'react'
 import { Providers } from './providers'

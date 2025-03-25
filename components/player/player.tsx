@@ -1,4 +1,5 @@
 'use client'
+
 import { useMediaKeyPress } from '@/hooks/use-media-keypress'
 import { cn } from '@/lib/utils'
 import { useMusicState } from '@/store/app.store'

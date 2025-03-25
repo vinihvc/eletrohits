@@ -1,6 +1,5 @@
 import { cn } from '@/lib/utils'
 import { useMusicState } from '@/store/app.store'
-
 import { useMusicActions } from '@/store/app.store'
 import type { SongType } from '@/types/song'
 import { Heart } from 'lucide-react'

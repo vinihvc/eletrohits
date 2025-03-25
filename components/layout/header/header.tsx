@@ -1,8 +1,7 @@
 import { Button } from '@/components/ui/button'
 import { Logo } from '@/components/ui/logo'
-import { cn } from '@/lib/utils'
-
 import { NavLink } from '@/components/ui/nav-link'
+import { cn } from '@/lib/utils'
 import { SiGithub } from '@icons-pack/react-simple-icons'
 import type React from 'react'
 import { HeaderNavigation } from './header.navigation'

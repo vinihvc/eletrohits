@@ -55,7 +55,10 @@ const PlayerPlaylist = (props: PlayerPlaylistProps) => {
 
   return (
     <Drawer open={isPlaylistOpen} onOpenChange={togglePlaylist} modal={false}>
-      <DrawerTrigger className="data-[state=open]:bg-primary" asChild>
+      <DrawerTrigger
+        className="data-[state=open]:bg-primary data-[state=open]:text-primary-foreground"
+        asChild
+      >
         <Button variant="ghost" size="icon" {...props}>
           <ListVideo className="h-4 w-4" />
           <span className="sr-only">Open Playlist</span>
@@ -71,7 +74,7 @@ const PlayerPlaylist = (props: PlayerPlaylistProps) => {
         </DrawerDescription>
 
         <DrawerClose className="absolute top-3 right-3 max-sm:hidden" asChild>
-          <Button variant="ghost">
+          <Button>
             <ChevronDown className="h-4 w-4" />
             Minimize
           </Button>

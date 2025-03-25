@@ -8,10 +8,7 @@ Eletrohits is a web player application built with Next.js, designed for streamin
 
 - Next 15
 - Tailwind
-- Shadcn UI
-- Typescript
 - Zustand
-- Axios
 
 ## Getting Started
 

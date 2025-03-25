@@ -12,11 +12,11 @@ export const PlayerSongInfo = () => {
 
   return (
     <>
-      <div className="relative size-10 overflow-hidden rounded-full">
+      <div className="relative h-10 w-1 overflow-hidden rounded-full">
         <BlurImage
           width={40}
           height={40}
-          className="aspect-square size-10 scale-125 select-none object-cover"
+          className="aspect-square h-10 w-1 scale-125 select-none object-cover"
           src={`https://img.youtube.com/vi/${currentSong?.youtubeId}/0.jpg`}
           alt={`${currentSong?.name} album cover`}
         />

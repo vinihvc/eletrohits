@@ -27,7 +27,7 @@ const SongsDropdown = (props: SongsDropdownProps) => {
       onOpenChange={onChangeDropdown}
     >
       <Button variant="ghost" size="icon">
-        <EllipsisVertical className="size-5 text-muted-foreground" />
+        <EllipsisVertical className="h-5 w-5 text-muted-foreground" />
       </Button>
     </SongsTypeMenu>
   )

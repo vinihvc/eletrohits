@@ -10,7 +10,7 @@ export const NextButton = ({ ...props }) => {
 
   return (
     <Button variant="ghost" size="icon" onClick={nextSong} {...props}>
-      <SkipForward className="size-4" />
+      <SkipForward className="h-4 w-4" />
       <span className="sr-only">Next song</span>
     </Button>
   )

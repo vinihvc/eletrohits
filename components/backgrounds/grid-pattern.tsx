@@ -31,7 +31,7 @@ export const GridPattern = (props: GridPatternProps) => {
     <svg
       aria-hidden="true"
       className={cn(
-        'pointer-events-none fixed inset-0 z-[-1] size-full fill-card-forestroke-card-foreground/10 stroke-card-foreground/10 dark:fill-card-forestroke-card-foreground/5 dark:stroke-card-foreground/5',
+        'pointer-events-none fixed inset-0 z-[-1] h-full w-full fill-card-forestroke-card-foreground/10 stroke-card-foreground/10 dark:fill-card-forestroke-card-foreground/5 dark:stroke-card-foreground/5',
         className,
       )}
       {...rest}

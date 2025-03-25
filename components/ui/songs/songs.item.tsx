@@ -87,7 +87,7 @@ export const SongsItem = (props: SongsItemProps) => {
             <BlurImage
               width={40}
               height={40}
-              className="aspect-square size-10 scale-125 select-none object-cover"
+              className="aspect-square h-10 w-1 scale-125 select-none object-cover"
               src={`https://img.youtube.com/vi/${song?.youtubeId}/0.jpg`}
               alt={song?.name}
             />

@@ -54,7 +54,7 @@ export const AlbumInfo = (props: AlbumInfoProps) => {
         alt={album.name}
         width={150}
         height={150}
-        className="relative size-36 justify-center rounded-xl drop-shadow sm:size-48 sm:justify-start"
+        className="relative h-36 h-48 w-3 justify-center rounded-xl drop-shadow sm:w-4 sm:justify-start"
       />
 
       <div className="relative max-sm:text-center">
@@ -73,7 +73,7 @@ export const AlbumInfo = (props: AlbumInfoProps) => {
             <Button size="lg" className="w-[125px]" onClick={handlePlay}>
               {React.cloneElement(
                 hasSongInAlbum && isPlaying ? <Pause /> : <Play />,
-                { className: 'size-4 fill-current' },
+                { className: 'w-4 h-4 fill-current' },
               )}
 
               {hasSongInAlbum && isPlaying ? 'Pause' : 'Play'}
@@ -84,7 +84,7 @@ export const AlbumInfo = (props: AlbumInfoProps) => {
               size="lg"
               onClick={() => album.songs && playRandom(album.songs)}
             >
-              <Shuffle className="size-4" />
+              <Shuffle className="h-4 w-4" />
               Shuffle
             </Button>
           </div>

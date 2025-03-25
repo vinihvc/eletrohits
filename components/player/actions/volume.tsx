@@ -16,7 +16,7 @@ export const VolumeButton = ({ ...props }) => {
       {...props}
     >
       {React.cloneElement(isMuted ? <VolumeX /> : <Volume2 />, {
-        className: 'size-4',
+        className: 'w-4 h-4',
       })}
 
       <span className="sr-only">{isMuted ? 'Mute' : 'Unmute'}</span>

@@ -1,7 +1,7 @@
-import { type VariantProps, tv } from 'tailwind-variants'
-import React from 'react'
 import { cn } from '@/lib/utils'
 import { Slot } from '@radix-ui/react-slot'
+import React from 'react'
+import { type VariantProps, tv } from 'tailwind-variants'
 
 export const buttonVariants = tv({
   base: [
@@ -38,7 +38,7 @@ export const buttonVariants = tv({
       sm: 'h-9 px-4',
       md: 'h-10 px-4 py-2',
       lg: 'h-11 px-8 sm:text-sm',
-      icon: 'size-8',
+      icon: 'h-8 w-8',
     },
   },
   defaultVariants: {

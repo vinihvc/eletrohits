@@ -12,13 +12,13 @@ export const Logo = (props: LogoProps) => {
     <div
       role="img"
       className={cn(
-        'flex select-none items-center gap-2 font-semibold text-lg tracking-wide',
+        'flex select-none items-center gap-2 font-semibold text-lg',
         className,
       )}
       {...rest}
       aria-hidden
     >
-      <Music className="size-6 text-primary" />
+      <Music className="h-6 w-6 text-primary" />
 
       <span>Eletrohits</span>
     </div>

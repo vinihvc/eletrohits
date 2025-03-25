@@ -53,7 +53,7 @@ export const AlbumCard = ({ album }: AlbumCardProps) => {
       onTouchStart={handleMouseEnter}
       onMouseEnter={handleMouseEnter}
     >
-      <div className="relative aspect-square size-full overflow-hidden rounded-xl ring-primary ring-offset-2 ring-offset-background transition-all group-focus-visible:ring-2">
+      <div className="relative aspect-square h-full w-full overflow-hidden rounded-xl ring-primary ring-offset-2 ring-offset-background transition-all group-focus-visible:ring-2">
         <Image
           src={`/img/albums/${album.id}.webp`}
           alt={album.name}
@@ -63,15 +63,15 @@ export const AlbumCard = ({ album }: AlbumCardProps) => {
           fill
         />
 
-        <div className="absolute top-0 left-0 hidden size-full items-center justify-center opacity-0 transition-all group-hover:opacity-100 sm:flex">
+        <div className="absolute top-0 left-0 hidden h-full w-full items-center justify-center opacity-0 transition-all group-hover:opacity-100 sm:flex">
           <Button
             tabIndex={-1}
             variant="ghost"
-            className="size-14 bg-black/60 text-white hover:scale-105 hover:bg-black"
+            className="h-14 w-1 bg-black/60 text-white hover:scale-105 hover:bg-black"
             onClick={handleClick}
           >
             {React.cloneElement(isPlayingAlbum ? <Pause /> : <Play />, {
-              className: 'size-5 fill-current',
+              className: 'w-5 h-5 fill-current',
             })}
           </Button>
         </div>

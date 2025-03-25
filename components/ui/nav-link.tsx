@@ -42,6 +42,7 @@ export const NavLink = React.forwardRef<HTMLAnchorElement, LinkProps>(
         href={href}
         className={cn({ active: isActive }, className)}
         aria-current={isActive || undefined}
+        prefetch
         ref={ref}
         {...(isExternal && {
           href,

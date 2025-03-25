@@ -50,7 +50,7 @@ export const HeaderNavigation = (props: HeaderNavigationProps) => {
           href="/party"
           className="hover:text-foreground dark:text-muted-foreground [&.active]:bg-primary [&.active]:text-white"
         >
-          <PartyPopper className="size-4" />
+          <PartyPopper className="h-4 w-4" />
           Party
         </NavLink>
       </Button>
@@ -61,7 +61,7 @@ export const HeaderNavigation = (props: HeaderNavigationProps) => {
           className="group hover:text-foreground dark:text-muted-foreground [&.active]:bg-primary [&.active]:text-white"
         >
           <Disc3
-            className={cn('size-4', {
+            className={cn('h-4 w-4', {
               'animate-spin text-primary group-[&.active]:animate-none group-[&.active]:text-white':
                 animate,
             })}

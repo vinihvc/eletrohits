@@ -19,7 +19,7 @@ export const useLike = (data: SongType) => {
     return (
       <Heart
         data-liked={isLiked}
-        className={cn('size-4 transition', {
+        className={cn('h-4 w-4 transition', {
           'fill-current stroke-current': isLiked,
         })}
       />

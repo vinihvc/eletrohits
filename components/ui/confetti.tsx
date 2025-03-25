@@ -27,7 +27,7 @@ const Confetti = (props: ConfettiProps) => {
   // }, [])
 
   return (
-    <div ref={$ref} className={cn('fixed inset-0 size-full', className)}>
+    <div ref={$ref} className={cn('fixed inset-0 h-full w-full', className)}>
       <ReactCanvasConfetti
         // comment this to stop
         autorun={{ speed: 20 }}

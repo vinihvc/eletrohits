@@ -8,7 +8,7 @@ export const PrevButton = ({ ...props }) => {
 
   return (
     <Button size="icon" variant="ghost" onClick={previousSong} {...props}>
-      <SkipBack className="size-4" />
+      <SkipBack className="h-4 w-4" />
       <span className="sr-only">Previous song</span>
     </Button>
   )

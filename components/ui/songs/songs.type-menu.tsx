@@ -63,7 +63,7 @@ export const SongsTypeMenu = (props: SongsTypeMenuProps) => {
               className="gap-2"
               onClick={() => handleAddToQueue('next')}
             >
-              <ListStart className="size-4" />
+              <ListStart className="h-4 w-4" />
               Play next
             </ComponentItem>
 
@@ -71,7 +71,7 @@ export const SongsTypeMenu = (props: SongsTypeMenuProps) => {
               className="gap-2"
               onClick={() => handleAddToQueue('last')}
             >
-              <ListPlus className="size-4" />
+              <ListPlus className="h-4 w-4" />
               Add to queue
             </ComponentItem>
           </>
@@ -79,7 +79,7 @@ export const SongsTypeMenu = (props: SongsTypeMenuProps) => {
 
         {isInQueue && (
           <ComponentItem className="gap-2" onClick={handleRemoveFromQueue}>
-            <ListX className="size-4" />
+            <ListX className="h-4 w-4" />
             Remove from queue
           </ComponentItem>
         )}

@@ -54,7 +54,7 @@ export const PlayButton = (props: PlayButtonProps) => {
       {...rest}
     >
       {React.cloneElement(isSameSong && isPlaying ? <Pause /> : <Play />, {
-        className: 'size-3 fill-current',
+        className: 'w-3 h-3 fill-current',
       })}
 
       <span className="sr-only">

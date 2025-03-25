@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button'
+import { NavLink } from '@/components/ui/nav-link'
 import dynamic from 'next/dynamic'
-import Link from 'next/link'
 
 const LottiePlayer = dynamic(() => import('@/components/ui/lottie'))
 
@@ -23,13 +23,13 @@ const NotFoundPage = () => {
 
           <div>
             <Button className="font-semibold" size="lg" asChild>
-              <Link href="/">Go Home</Link>
+              <NavLink href="/">Go Home</NavLink>
             </Button>
           </div>
         </div>
 
         <LottiePlayer
-          className="-z-[1] inset-0 order-1 size-full sm:absolute"
+          className="-z-[1] inset-0 order-1 h-full w-full sm:absolute"
           path="/lottie/astronaut.lottie"
         />
       </div>

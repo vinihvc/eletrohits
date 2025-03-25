@@ -35,7 +35,7 @@ const DropdownSubTrigger = React.forwardRef<
     {...props}
   >
     {children}
-    <ChevronRight className="ml-auto size-4" />
+    <ChevronRight className="ml-auto h-4 w-4" />
   </RPrimitive.SubTrigger>
 ))
 DropdownSubTrigger.displayName = RPrimitive.SubTrigger.displayName
@@ -112,7 +112,7 @@ const DropdownCheckboxItem = React.forwardRef<
   >
     <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
       <RPrimitive.ItemIndicator>
-        <Check className="size-4" />
+        <Check className="h-4 w-4" />
       </RPrimitive.ItemIndicator>
     </span>
     {children}
@@ -134,7 +134,7 @@ const DropdownRadioItem = React.forwardRef<
   >
     <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
       <RPrimitive.ItemIndicator>
-        <Dot className="size-4 fill-current" />
+        <Dot className="h-4 w-4 fill-current" />
       </RPrimitive.ItemIndicator>
     </span>
     {children}
@@ -177,10 +177,7 @@ const DropdownShortcut = ({
   ...props
 }: React.HTMLAttributes<HTMLSpanElement>) => {
   return (
-    <span
-      className={cn('ml-auto text-xs tracking-widest opacity-60', className)}
-      {...props}
-    />
+    <span className={cn('ml-auto text-xs opacity-60', className)} {...props} />
   )
 }
 DropdownShortcut.displayName = 'DropdownShortcut'

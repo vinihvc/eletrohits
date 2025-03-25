@@ -2,9 +2,9 @@
 
 import { AlbumInfo } from '@/components/ui/album/album.info'
 import { Button } from '@/components/ui/button'
+import { NavLink } from '@/components/ui/nav-link'
 import { Songs } from '@/components/ui/songs'
 import { useMusicState } from '@/store/app.store'
-import Link from 'next/link'
 
 const LibraryPage = () => {
   const { liked } = useMusicState()
@@ -30,7 +30,7 @@ const LibraryPage = () => {
           </div>
 
           <Button size="lg" asChild>
-            <Link href="/">Discover</Link>
+            <NavLink href="/">Discover</NavLink>
           </Button>
         </div>
       )}

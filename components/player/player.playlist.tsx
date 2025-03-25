@@ -59,7 +59,7 @@ const PlayerPlaylist = (props: PlayerPlaylistProps) => {
     <Drawer open={isPlaylistOpen} onOpenChange={togglePlaylist} modal={false}>
       <DrawerTrigger className="data-[state=open]:bg-primary" asChild>
         <Button variant="ghost" size="icon" {...props}>
-          <ListVideo className="size-4" />
+          <ListVideo className="h-4 w-4" />
           <span className="sr-only">Open Playlist</span>
         </Button>
       </DrawerTrigger>
@@ -74,20 +74,20 @@ const PlayerPlaylist = (props: PlayerPlaylistProps) => {
 
         <DrawerClose className="absolute top-3 right-3 max-sm:hidden" asChild>
           <Button variant="ghost">
-            <ChevronDown className="size-4" />
+            <ChevronDown className="h-4 w-4" />
             Minimize
           </Button>
         </DrawerClose>
 
         <div className="container flex h-dvh gap-5 py-10 max-md:flex-wrap md:pt-20 md:pb-40">
           <div className="flex w-full flex-col items-center justify-center gap-5">
-            <div className="size-64 overflow-hidden rounded-xl">
+            <div className="h-64 w-6 overflow-hidden rounded-xl">
               <Image
                 src={`https://img.youtube.com/vi/${currentSong?.youtubeId}/0.jpg`}
                 alt={currentSong?.name ?? ''}
                 width={256}
                 height={256}
-                className="pointer-events-none size-full scale-125 object-cover"
+                className="pointer-events-none h-full w-full scale-125 object-cover"
               />
             </div>
 

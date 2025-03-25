@@ -1,8 +1,8 @@
 'use client'
 
+import { cn } from '@/lib/utils'
 import * as DialogPrimitive from '@radix-ui/react-dialog'
 import * as React from 'react'
-import { cn } from '@/lib/utils'
 import { type VariantProps, tv } from 'tailwind-variants'
 
 export const Dialog = DialogPrimitive.Root
@@ -82,10 +82,7 @@ export const DialogTitle = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <DialogPrimitive.Title
     ref={ref}
-    className={cn(
-      'font-semibold text-lg leading-none tracking-tight',
-      className,
-    )}
+    className={cn('font-semibold text-lg leading-none', className)}
     {...props}
   />
 ))
